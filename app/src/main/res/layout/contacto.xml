@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:backgroundTint="@color/azul"
+    android:background="@drawable/bordes_redondos"
+    android:layout_marginVertical="5dp"
+    android:layout_marginHorizontal="5dp"
+    android:padding="5dp">
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/iv_genero"
+        android:layout_marginHorizontal="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:id="@+id/tv_nombre"
+            android:layout_marginVertical="5dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_telefono"
+            android:text="Telefono"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/backgroundMain"
+            android:layout_marginHorizontal="3dp"
+            android:id="@+id/btn_llamar"
+            app:srcCompat="@android:drawable/stat_sys_phone_call" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="3dp"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/backgroundMain"
+            android:id="@+id/btn_eliminar"
+            app:srcCompat="@android:drawable/ic_delete" />
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

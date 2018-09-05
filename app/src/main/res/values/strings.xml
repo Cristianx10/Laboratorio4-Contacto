@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Laboratorio4</string>
+
+    <string name="nameContact">Nombre del contacto</string>
+    <string name="noPhone">Telefono</string>
+    <string name="insert">Agregar</string>
+
+</resources>
