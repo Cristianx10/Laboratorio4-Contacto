@@ -2,6 +2,7 @@ package com.example.ecosistemas.laboratorio4;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -16,6 +17,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -71,10 +73,10 @@ public class ContactosAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
 
-                String numbero = et_telefono.getText().toString();
+                String numero = et_telefono.getText().toString();
 
                 Intent intent = new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse("tel:" + numbero));
+                intent.setData(Uri.parse("tel:" + numero));
 
                 int permissionCheck = ContextCompat.checkSelfPermission(activity, Manifest.permission.CALL_PHONE);
 
@@ -83,14 +85,8 @@ public class ContactosAdapter extends BaseAdapter {
                     ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.CALL_PHONE}, 225);
                 } else {
                     Log.i("Mensaje", "Se tiene permiso para realizar llamadas!");
+                    activity.startActivity(intent);
                 }
-
-                activity.startActivity(intent);
-
-
-
-
-
 
             }
         });
@@ -111,4 +107,7 @@ public class ContactosAdapter extends BaseAdapter {
         contactos.addFirst(contact);
         notifyDataSetChanged();
     }
+
+
+
 }
